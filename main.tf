@@ -32,11 +32,11 @@ resource "aws_security_group" "sg" {
 }
 
 
-resource "aws_instance" "test" {
-  ami           = data.aws_ami.ami.id
-  instance_type = var.instance_type
-  subnet_id     = var.subnet_id
-}
+#resource "aws_instance" "ami" {
+#  ami           = data.aws_ami.ami.id
+#  instance_type = var.instance_type
+#  subnet_id     = var.subnet_id
+#}
 
 resource "aws_launch_template" "template" {
   name_prefix            = "${var.name}-${var.env}-it"
